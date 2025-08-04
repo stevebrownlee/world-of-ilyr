@@ -25,10 +25,10 @@ const getAssetUrl = (path: string) => {
             Follow Iris Evershade as she discovers her ability to work with threshold harmonics—a rare and suppressed form of magic that challenges everything the Arbories teach about the nature of reality.
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
-            <a href="/book" class="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 text-center">
+            <a href={getAssetUrl('book')} class="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 text-center">
               Discover the Book
             </a>
-            <a href="/stories" class="border border-emerald-600 text-emerald-400 hover:bg-emerald-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 text-center">
+            <a href={getAssetUrl('stories')} class="border border-emerald-600 text-emerald-400 hover:bg-emerald-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 text-center">
               Read Short Stories
             </a>
           </div>
