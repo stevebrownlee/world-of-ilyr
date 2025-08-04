@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* Increase base font sizes across the site (equivalent to 110% browser zoom) */
+html {
+  font-size: 110%; /* Increases base font size from 16px to ~17.6px */
+}
+
+/* Ensure consistent scaling for all text elements */
+body {
+  font-size: 1.1rem; /* Additional boost for body text */
+  line-height: 1.7; /* Slightly increase line height for better readability */
+}
+
+/* Scale up navigation elements */
+nav a {
+  font-size: 1.1em !important;
+}
+
+/* Scale up headings beyond the base increase */
+h1 { font-size: 1.15em; }
+h2 { font-size: 1.1em; }
+h3 { font-size: 1.1em; }
+h4 { font-size: 1.05em; }
+h5 { font-size: 1.05em; }
+h6 { font-size: 1.05em; }
+
+/* Scale up button text */
+button, .btn, a[class*="bg-"], a[class*="border-"] {
+  font-size: 1.05em !important;
+}
+
+/* Scale up form elements */
+input, textarea, select {
+  font-size: 1.1em !important;
+}
+
+/* Ensure footer text is still readable */
+footer {
+  font-size: 1.05em;
+}
+
+/* Scale up any remaining small text */
+.text-sm {
+  font-size: 1rem !important; /* Make small text equivalent to normal size */
+}
+
+.text-xs {
+  font-size: 0.9rem !important; /* Make extra small text equivalent to small */
+}

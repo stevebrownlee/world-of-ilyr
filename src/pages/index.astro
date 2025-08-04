@@ -1,0 +1,200 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Helper function to create proper asset URLs
+const getAssetUrl = (path: string) => {
+  const base = import.meta.env.BASE_URL;
+  return base.endsWith('/') ? `${base}${path}` : `${base}/${path}`;
+};
+---
+
+<Layout title="The Sixth Wood - Enter the World of I'lyr">
+  <!-- Hero Section -->
+  <section class="relative py-12 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-emerald-900/80"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
+        <div class="lg:col-span-7">
+          <p class="text-6xl font-bold text-emerald-400 mb-6 font-['Cinzel']">
+            The Sixth Wood
+          </p>
+          <p class="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed">
+            Enter the mystical world of <span class="text-emerald-400 font-semibold">I'lyr</span>, where harmonics shape reality and an ancient corruption struggles to find it way back to I'lyr.
+          </p>
+          <p class="text-lg text-slate-400 mb-8 max-w-2xl">
+            Follow Iris Evershade as she discovers her ability to work with threshold harmonics—a rare and suppressed form of magic that challenges everything the Arbories teach about the nature of reality.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/book" class="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 text-center">
+              Discover the Book
+            </a>
+            <a href="/stories" class="border border-emerald-600 text-emerald-400 hover:bg-emerald-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 text-center">
+              Read Short Stories
+            </a>
+          </div>
+        </div>
+        <div class="lg:col-span-5 mt-12 lg:mt-0">
+          <div class="relative">
+            <img src={getAssetUrl('images/book-cover.png')} alt="The Sixth Wood Book Cover" class="w-full max-w-md mx-auto rounded-lg shadow-2xl border border-emerald-800/30">
+            <div class="absolute inset-0 bg-gradient-to-t from-emerald-900/20 to-transparent rounded-lg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book Overview -->
+  <section class="py-20 bg-slate-800/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-emerald-400 mb-4 font-['Cinzel']">
+          A World of Harmonic Magic
+        </h2>
+        <p class="text-xl text-slate-300 max-w-3xl mx-auto">
+          In a world where six schools of harmony once flourished, one has been suppressed for generations.
+          Now, a young student must rediscover the forbidden sixth tradition to save her world.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-slate-900/50 p-8 rounded-lg border border-emerald-800/30">
+          <div class="text-emerald-400 text-4xl mb-4">🌳</div>
+          <h3 class="text-xl font-semibold text-emerald-400 mb-3 font-['Cinzel']">The Six Arbories</h3>
+          <p class="text-slate-300 text-lg">
+            Elm, Oak, Birch, Ash, Fir, and the forbidden Yew—each represents a different approach to harmonic magic,
+            with their own traditions, strengths, and secrets.
+          </p>
+        </div>
+
+        <div class="bg-slate-900/50 p-8 rounded-lg border border-emerald-800/30">
+          <div class="text-emerald-400 text-4xl mb-4">⚡</div>
+          <h3 class="text-xl font-semibold text-emerald-400 mb-3 font-['Cinzel']">Threshold Harmonics</h3>
+          <p class="text-slate-300 text-lg">
+            The suppressed magic of the Yew tradition allows practitioners to work at the boundaries between
+            states of being—a power both wondrous and dangerous.
+          </p>
+        </div>
+
+        <div class="bg-slate-900/50 p-8 rounded-lg border border-emerald-800/30">
+          <div class="text-emerald-400 text-4xl mb-4">🌊</div>
+          <h3 class="text-xl font-semibold text-emerald-400 mb-3 font-['Cinzel']">The Corrupted Whisper</h3>
+          <p class="text-slate-300 text-lg">
+            An ancient corruption threatens to consume the harmonic traditions, and only by embracing
+            forbidden knowledge can it be contained.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Short Stories Preview -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-emerald-400 mb-4 font-['Cinzel']">
+          Tales from I'lyr
+        </h2>
+        <p class="text-xl text-slate-300 max-w-3xl mx-auto">
+          Explore the rich world of I'lyr through these standalone stories that reveal the depth
+          and complexity of harmonic traditions across different regions and times.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-slate-900/50 rounded-lg overflow-hidden border border-emerald-800/30 hover:border-emerald-600/50 transition-colors duration-200">
+          <div class="h-48 bg-gradient-to-br from-emerald-800 to-slate-800 flex items-center justify-center">
+            <span class="text-6xl">🏔️</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-semibold text-emerald-400 mb-2 font-['Cinzel']">Healer's Dilemma</h3>
+            <p class="text-slate-300 text-md mb-4">
+              A traveling healer faces an impossible choice when conventional techniques fail against a supernatural plague.
+            </p>
+            <a href="/stories#healers-dilemma" class="text-emerald-400 hover:text-emerald-300 text-md font-semibold">
+              Read More →
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-slate-900/50 rounded-lg overflow-hidden border border-emerald-800/30 hover:border-emerald-600/50 transition-colors duration-200">
+          <div class="h-48 bg-gradient-to-br from-amber-800 to-slate-800 flex items-center justify-center">
+            <span class="text-6xl">🗺️</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-semibold text-emerald-400 mb-2 font-['Cinzel']">Cartographer's Discovery</h3>
+            <p class="text-slate-300 text-md mb-4">
+              Asher Silverbrook uncovers dangerous secrets about the fragmentation of harmonic traditions.
+            </p>
+            <a href="/stories#cartographers-discovery" class="text-emerald-400 hover:text-emerald-300 text-md font-semibold">
+              Read More →
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-slate-900/50 rounded-lg overflow-hidden border border-emerald-800/30 hover:border-emerald-600/50 transition-colors duration-200">
+          <div class="h-48 bg-gradient-to-br from-blue-800 to-slate-800 flex items-center justify-center">
+            <span class="text-6xl">🌊</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-semibold text-emerald-400 mb-2 font-['Cinzel']">Shell Weaver's Storm</h3>
+            <p class="text-slate-300 text-md mb-4">
+              A coastal village faces a supernatural tempest that threatens their connection to ancient traditions.
+            </p>
+            <a href="/stories#shell-weaver" class="text-emerald-400 hover:text-emerald-300 text-md font-semibold">
+              Read More →
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-slate-900/50 rounded-lg overflow-hidden border border-emerald-800/30 hover:border-emerald-600/50 transition-colors duration-200">
+          <div class="h-48 bg-gradient-to-br from-green-800 to-slate-800 flex items-center justify-center">
+            <span class="text-6xl">🌾</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-semibold text-emerald-400 mb-2 font-['Cinzel']">Reed Dancer's Gift</h3>
+            <p class="text-slate-300 text-md mb-4">
+              In the marshlands of Underfen, a young person discovers their connection to an ancient guardian spirit.
+            </p>
+            <a href="/stories#reed-dancer" class="text-emerald-400 hover:text-emerald-300 text-md font-semibold">
+              Read More →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="/stories" class="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
+          Explore All Stories
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-20 bg-gradient-to-r from-emerald-900/50 to-slate-900/50">
+    <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-emerald-400 mb-6 font-['Cinzel']">
+        Begin Your Journey
+      </h2>
+      <p class="text-xl text-slate-300 mb-8">
+        Step into a world where music and magic intertwine, where ancient traditions hold the key to survival,
+        and where one young woman's discovery will change everything.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/book" class="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
+          Read The Sixth Wood
+        </a>
+        <a href="/about" class="border border-emerald-600 text-emerald-400 hover:bg-emerald-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
+          Meet the Author
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Custom styles for enhanced visual appeal */
+  .hero-gradient {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(6, 78, 59, 0.8) 100%);
+  }
+</style>

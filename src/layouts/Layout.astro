@@ -1,0 +1,114 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Enter the mystical world of I'lyr, where harmonics shape reality and ancient secrets await discovery." } = Astro.props;
+
+// Helper function to create proper asset URLs
+const getAssetUrl = (path: string) => {
+  const base = import.meta.env.BASE_URL;
+  return base.endsWith('/') ? `${base}${path}` : `${base}/${path}`;
+};
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href={getAssetUrl('favicon.svg')} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-800 min-h-screen text-slate-100">
+    <!-- Background Pattern -->
+    <div class="fixed inset-0 opacity-5 pointer-events-none">
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style={`background-image: url('${getAssetUrl('images/world-background.png')}')`}></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="relative z-10 bg-slate-900/80 backdrop-blur-sm border-b border-emerald-800/30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center">
+            <a href={getAssetUrl('/')} class="text-2xl font-bold text-emerald-400 font-['Cinzel']">
+              The Sixth Wood
+            </a>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a href={getAssetUrl('/')} class="text-slate-300 hover:text-emerald-400 px-3 py-2 text-lg font-medium transition-colors duration-200">Home</a>
+              <a href={getAssetUrl('book')} class="text-slate-300 hover:text-emerald-400 px-3 py-2 text-lg font-medium transition-colors duration-200">The Book</a>
+              <a href={getAssetUrl('stories')} class="text-slate-300 hover:text-emerald-400 px-3 py-2 text-lg font-medium transition-colors duration-200">Short Stories</a>
+              <a href={getAssetUrl('about')} class="text-slate-300 hover:text-emerald-400 px-3 py-2 text-lg font-medium transition-colors duration-200">About</a>
+            </div>
+          </div>
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button type="button" class="text-slate-300 hover:text-emerald-400 focus:outline-none focus:text-emerald-400" id="mobile-menu-button">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-900/90">
+          <a href="/" class="text-slate-300 hover:text-emerald-400 block px-3 py-2 text-base font-medium">Home</a>
+          <a href="/book" class="text-slate-300 hover:text-emerald-400 block px-3 py-2 text-base font-medium">The Book</a>
+          <a href="/stories" class="text-slate-300 hover:text-emerald-400 block px-3 py-2 text-base font-medium">Short Stories</a>
+          <a href="/about" class="text-slate-300 hover:text-emerald-400 block px-3 py-2 text-base font-medium">About</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="relative z-10">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 bg-slate-900/80 backdrop-blur-sm border-t border-emerald-800/30 mt-20">
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <p class="text-slate-400 text-sm">
+            © 2024 The Sixth Wood. All rights reserved. | Enter the world of I'lyr where harmonics shape reality.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      mobileMenuButton?.addEventListener('click', () => {
+        mobileMenu?.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  body {
+    font-family: 'Crimson Text', serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+  }
+</style>
