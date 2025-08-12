@@ -15,6 +15,11 @@ const getAssetUrl = (path: string) => {
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
         <div class="lg:col-span-7">
+          <!-- Upcoming Release Badge -->
+          <div class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-amber-500/20 text-amber-300 border border-amber-500/30 mb-4">
+            <span class="w-2 h-2 bg-amber-400 rounded-full mr-2 animate-pulse"></span>
+            Upcoming Release
+          </div>
           <p class="text-6xl font-bold text-emerald-400 mb-6 font-['Cinzel']">
             The Sixth Wood
           </p>
@@ -24,13 +29,35 @@ const getAssetUrl = (path: string) => {
           <p class="text-xl md:text-2xl text-slate-200 mb-8 max-w-2xl">
             Join Iris Evershade as she discovers her ability to work with a rare and suppressed harmony that challenges everything the Arbories teach about natural order.
           </p>
-          <div class="flex flex-col sm:flex-row ">
+          <div class="flex flex-col sm:flex-row gap-4 mb-8">
             <a href={getAssetUrl('book')} class="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 text-center">
               Discover the Book
             </a>
             <a href={getAssetUrl('stories')} class="border border-emerald-600 text-emerald-400 hover:bg-emerald-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 text-center">
               Read Short Stories
             </a>
+          </div>
+
+          <!-- Newsletter Signup -->
+          <div class="max-w-md">
+            <label for="newsletter-email" class="block text-sm font-medium text-slate-300 mb-2">
+              Stay updated on the release
+            </label>
+            <div class="flex flex-col sm:flex-row gap-2">
+              <input
+                type="email"
+                id="newsletter-email"
+                name="email"
+                placeholder="Enter your email address"
+                class="flex-1 px-4 py-2 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+              >
+              <button
+                type="submit"
+                class="bg-slate-700 hover:bg-slate-600 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200 whitespace-nowrap"
+              >
+                Join Newsletter
+              </button>
+            </div>
           </div>
         </div>
         <div class="lg:col-span-5 mt-12 lg:mt-0">
@@ -100,21 +127,8 @@ const getAssetUrl = (path: string) => {
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-slate-900/50 rounded-lg overflow-hidden border border-emerald-800/30 hover:border-emerald-600/50 transition-colors duration-200">
-          <div class="h-48 bg-gradient-to-br from-emerald-800 to-slate-800 flex items-center justify-center">
-            <span class="text-6xl">🏔️</span>
-          </div>
-          <div class="p-6">
-            <h3 class="text-lg font-semibold text-emerald-400 mb-2 font-['Cinzel']">Healer's Dilemma</h3>
-            <p class="text-slate-300 text-md mb-4">
-              A traveling healer faces an impossible choice when conventional techniques fail against a supernatural plague.
-            </p>
-            <a href="/stories#healers-dilemma" class="text-emerald-400 hover:text-emerald-300 text-md font-semibold">
-              Read More →
-            </a>
-          </div>
-        </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+
 
         <div class="bg-slate-900/50 rounded-lg overflow-hidden border border-emerald-800/30 hover:border-emerald-600/50 transition-colors duration-200">
           <div class="h-48 bg-gradient-to-br from-amber-800 to-slate-800 flex items-center justify-center">
@@ -146,20 +160,7 @@ const getAssetUrl = (path: string) => {
           </div>
         </div>
 
-        <div class="bg-slate-900/50 rounded-lg overflow-hidden border border-emerald-800/30 hover:border-emerald-600/50 transition-colors duration-200">
-          <div class="h-48 bg-gradient-to-br from-green-800 to-slate-800 flex items-center justify-center">
-            <span class="text-6xl">🌾</span>
-          </div>
-          <div class="p-6">
-            <h3 class="text-lg font-semibold text-emerald-400 mb-2 font-['Cinzel']">Reed Dancer's Gift</h3>
-            <p class="text-slate-300 text-md mb-4">
-              In the marshlands of Underfen, a young person discovers their connection to an ancient guardian spirit.
-            </p>
-            <a href="/stories#reed-dancer" class="text-emerald-400 hover:text-emerald-300 text-md font-semibold">
-              Read More →
-            </a>
-          </div>
-        </div>
+
       </div>
 
       <div class="text-center mt-12">
