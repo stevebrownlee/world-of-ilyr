@@ -1,6 +1,6 @@
-# The Sixth Wood - Marketing Website
+# The Secret Harmony - Marketing Website
 
-A beautiful, responsive marketing website for "The Sixth Wood" fantasy novel and its companion short stories, built with Astro and Tailwind CSS.
+A beautiful, responsive marketing website for "The Secret Harmony" fantasy novel and its companion short stories, built with Astro and Tailwind CSS.
 
 ## Features
 
@@ -8,7 +8,7 @@ A beautiful, responsive marketing website for "The Sixth Wood" fantasy novel and
 - **Fantasy Theme**: Dark, mystical design inspired by the world of I'lyr
 - **Four Main Pages**:
   - **Home**: Hero section with book overview and short story previews
-  - **Book**: Detailed information about "The Sixth Wood" novel
+  - **Book**: Detailed information about "The Secret Harmony" novel
   - **Stories**: Comprehensive summaries of all four short stories
   - **About**: Author bio and writing philosophy
 
@@ -21,7 +21,7 @@ A beautiful, responsive marketing website for "The Sixth Wood" fantasy novel and
 
 ## Content Structure
 
-### The Sixth Wood (Main Novel)
+### The Secret Harmony (Main Novel)
 - 196,173 words across 82 chapters
 - Epic fantasy featuring Iris Evershade and threshold harmonics
 - Themes of tradition vs. innovation, knowledge suppression, and personal growth
