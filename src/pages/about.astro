@@ -1,42 +1,91 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
 const getAssetUrl = (path: string) => {
   const base = import.meta.env.BASE_URL;
-  return base.endsWith('/') ? `${base}${path}` : `${base}/${path}`;
+  return base.endsWith("/") ? `${base}${path}` : `${base}/${path}`;
 };
-
 ---
 
-
-<Layout title="About the Author" description="Meet the creator of The Secret Harmony and the world of I'lyr, where harmonic magic and ancient traditions shape reality.">
+<Layout
+  title="About the Author"
+  description="Meet the creator of The Secret Harmony and the world of I'lyr, where harmonic magic and ancient traditions shape reality."
+>
   <!-- Hero Section -->
   <section class="relative py-20 lg:py-32 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-emerald-900/80"></div>
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-emerald-900/80"
+    >
+    </div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:grid lg:grid-cols-12 lg:gap-12 items-center">
         <div class="lg:col-span-7">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-emerald-400 mb-6 font-['Cinzel']">
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-bold text-emerald-400 mb-6 font-['Cinzel']"
+          >
             About the Author
           </h1>
           <p class="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed">
             My name is Steve Brownlee, and welcome to the world of I'lyr.
           </p>
           <p class="text-xl text-slate-300 mb-8 leading-relaxed">
-            The Secret Harmony and its companion short stories represent years of world-building, character development, and exploration of themes around tradition, innovation, and the power of music and nature to shape our understanding of reality. I grew up loving nature, spending every opportunity to be in the forests around my childhood home. Iris Evershade is deeply inspired by my oldest daughter's journey through childhood into adulthood.
+            The Secret Harmony and its companion short stories represent years
+            of world-building, character development, and exploration of themes
+            around tradition, innovation, and the power of music and nature to
+            shape our understanding of reality. I grew up loving nature,
+            spending every opportunity to be in the forests around my childhood
+            home. Iris Evershade is deeply inspired by my oldest daughter's
+            journey through childhood into adulthood.
           </p>
-          <div class="bg-slate-900/50 p-6 rounded-lg border border-emerald-800/30">
-            <h3 class="text-lg font-semibold text-emerald-400 mb-3 font-['Cinzel']">The World of I'lyr</h3>
+
+          <div class="mb-9">
+            <h3
+              class="text-lg font-semibold text-emerald-400 mb-3 mt-5 font-['Cinzel']"
+            >
+              Keep Up To Date
+            </h3>
+
             <p class="text-slate-300 leading-relaxed text-lg">
-              I'lyr is a world where magic flows through music, where trees hold ancient wisdom, and where the boundaries between the physical and spiritual realms can be crossed by those brave enough to walk the threshold paths. It's a place where institutional knowledge clashes with folk wisdom, where young people must choose between safety and truth, and where the power of connection can overcome even the darkest corruptions.
+              <p class="mb-4">Visit the Portal to get the latest news about I'lyr instantly, and read past newsletters.</p>
+
+              <a href="https://world-of-ilyr.kit.com/profile"
+                target="_blank" class="border border-emerald-600 text-emerald-400 hover:bg-emerald-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 text-center">
+              Newsletter Portal
+            </a>
+
             </p>
           </div>
+          <div
+            class="bg-slate-900/50 p-6 rounded-lg border border-emerald-800/30"
+          >
+            <h3
+              class="text-lg font-semibold text-emerald-400 mb-3 font-['Cinzel']"
+            >
+              The World of I'lyr
+            </h3>
+            <p class="text-slate-300 leading-relaxed text-lg">
+              I'lyr is a world where magic flows through music, where trees hold
+              ancient wisdom, and where the boundaries between the physical and
+              spiritual realms can be crossed by those brave enough to walk the
+              threshold paths. It's a place where institutional knowledge
+              clashes with folk wisdom, where young people must choose between
+              safety and truth, and where the power of connection can overcome
+              even the darkest corruptions.
+            </p>
+          </div>
+
         </div>
         <div class="lg:col-span-5 mt-12 lg:mt-0">
           <div class="relative">
-            <div class="w-full max-w-md mx-auto h-96 bg-gradient-to-br from-emerald-700 to-slate-800 rounded-lg border border-emerald-800/30 flex items-center justify-center">
+            <div
+              class="w-full max-w-md mx-auto h-96 bg-gradient-to-br from-emerald-700 to-slate-800 rounded-lg border border-emerald-800/30 flex items-center justify-center"
+            >
               <div class="text-center">
-                <img src={getAssetUrl('images/steve.png')} alt="Author: Steve Brownlee" class="w-full max-w-md mx-auto rounded-lg shadow-2xl border border-emerald-800/30">
+                <img
+                  src={getAssetUrl("images/steve.png")}
+                  alt="Author: Steve Brownlee"
+                  class="w-full max-w-md mx-auto rounded-lg shadow-2xl border border-emerald-800/30"
+                />
               </div>
             </div>
           </div>
@@ -48,18 +97,36 @@ const getAssetUrl = (path: string) => {
   <!-- Writing Philosophy -->
   <section class="py-20 bg-slate-800/50">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl md:text-4xl font-bold text-emerald-400 mb-8 text-center font-['Cinzel']">
+      <h2
+        class="text-3xl md:text-4xl font-bold text-emerald-400 mb-8 text-center font-['Cinzel']"
+      >
         Writing Philosophy
       </h2>
       <div class="prose prose-lg prose-invert max-w-none">
         <p class="text-slate-300 leading-relaxed mb-6">
-          Fantasy literature has always been about more than escapism to me. It's about exploring the deepest questions of human experience through the lens of the impossible. In the world of I'lyr, I've tried to create a magic system that reflects the complexity of real-world knowledge systems: how there are multiples facets and perspectives of our world, how institutions preserve and control information, how folk wisdom survives alongside formal education, and how individuals must sometimes break rules to serve the greater good.
+          Fantasy literature has always been about more than escapism to me.
+          It's about exploring the deepest questions of human experience through
+          the lens of the impossible. In the world of I'lyr, I've tried to
+          create a magic system that reflects the complexity of real-world
+          knowledge systems: how there are multiples facets and perspectives of
+          our world, how institutions preserve and control information, how folk
+          wisdom survives alongside formal education, and how individuals must
+          sometimes break rules to serve the greater good.
         </p>
         <p class="text-slate-300 leading-relaxed mb-6">
-          The harmonic traditions of I'lyr are inspired by the way music, nature, and human emotion interweave in our own world. Each of the Arbories represents a different approach to understanding and working with these forces, but like any institutional system, they can become rigid and exclusionary.
+          The harmonic traditions of I'lyr are inspired by the way music,
+          nature, and human emotion interweave in our own world. Each of the
+          Arbories represents a different approach to understanding and working
+          with these forces, but like any institutional system, they can become
+          rigid and exclusionary.
         </p>
         <p class="text-slate-300 leading-relaxed">
-          Through Iris Evershade's journey and the stories of those who came before her, I hope to explore themes of personal growth, institutional reform, environmental harmony, and the courage required to challenge systems that no longer serve their original purpose. These are stories about finding your voice, building community, and the transformative power of embracing both tradition and innovation.
+          Through Iris Evershade's journey and the stories of those who came
+          before her, I hope to explore themes of personal growth, institutional
+          reform, environmental harmony, and the courage required to challenge
+          systems that no longer serve their original purpose. These are stories
+          about finding your voice, building community, and the transformative
+          power of embracing both tradition and innovation.
         </p>
       </div>
     </div>
@@ -68,42 +135,78 @@ const getAssetUrl = (path: string) => {
   <!-- The Creation Process -->
   <section class="py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl md:text-4xl font-bold text-emerald-400 mb-12 text-center font-['Cinzel']">
+      <h2
+        class="text-3xl md:text-4xl font-bold text-emerald-400 mb-12 text-center font-['Cinzel']"
+      >
         Creating I'lyr
       </h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-        <div class="bg-slate-900/50 p-8 rounded-lg border border-emerald-800/30">
+        <div
+          class="bg-slate-900/50 p-8 rounded-lg border border-emerald-800/30"
+        >
           <div class="text-emerald-400 text-4xl mb-4">🌳</div>
-          <h3 class="text-xl font-semibold text-emerald-400 mb-3 font-['Cinzel']">World-Building</h3>
+          <h3
+            class="text-xl font-semibold text-emerald-400 mb-3 font-['Cinzel']"
+          >
+            World-Building
+          </h3>
           <p class="text-slate-300">
-            The world of I'lyr began with a simple question: what if magic worked through music and trees? From there, I developed the six harmonic traditions, each with their own philosophy, techniques, and cultural practices.
+            The world of I'lyr began with a simple question: what if magic
+            worked through music and trees? From there, I developed the six
+            harmonic traditions, each with their own philosophy, techniques, and
+            cultural practices.
           </p>
         </div>
 
-        <div class="bg-slate-900/50 p-8 rounded-lg border border-emerald-800/30">
+        <div
+          class="bg-slate-900/50 p-8 rounded-lg border border-emerald-800/30"
+        >
           <div class="text-emerald-400 text-4xl mb-4">🎵</div>
-          <h3 class="text-xl font-semibold text-emerald-400 mb-3 font-['Cinzel']">Magic System</h3>
+          <h3
+            class="text-xl font-semibold text-emerald-400 mb-3 font-['Cinzel']"
+          >
+            Magic System
+          </h3>
           <p class="text-slate-300">
-            The harmonic magic system is based on real musical principles and the way different trees have been associated with various qualities throughout human history. Each tradition has its own "syllabery" and techniques.
+            The harmonic magic system is based on real musical principles and
+            the way different trees have been associated with various qualities
+            throughout human history. Each tradition has its own "syllabery" and
+            techniques.
           </p>
         </div>
 
-        <div class="bg-slate-900/50 p-8 rounded-lg border border-emerald-800/30">
+        <div
+          class="bg-slate-900/50 p-8 rounded-lg border border-emerald-800/30"
+        >
           <div class="text-emerald-400 text-4xl mb-4">🏛️</div>
-          <h3 class="text-xl font-semibold text-emerald-400 mb-3 font-['Cinzel']">Institutional Politics</h3>
+          <h3
+            class="text-xl font-semibold text-emerald-400 mb-3 font-['Cinzel']"
+          >
+            Institutional Politics
+          </h3>
           <p class="text-slate-300">
-            The Arbories represent how educational institutions can both preserve valuable knowledge and become obstacles to innovation. Their politics reflect real-world academic and religious hierarchies.
+            The Arbories represent how educational institutions can both
+            preserve valuable knowledge and become obstacles to innovation.
+            Their politics reflect real-world academic and religious
+            hierarchies.
           </p>
         </div>
 
-        <div class="bg-slate-900/50 p-8 rounded-lg border border-emerald-800/30">
+        <div
+          class="bg-slate-900/50 p-8 rounded-lg border border-emerald-800/30"
+        >
           <div class="text-emerald-400 text-4xl mb-4">🌿</div>
-          <h3 class="text-xl font-semibold text-emerald-400 mb-3 font-['Cinzel']">Folk Traditions</h3>
+          <h3
+            class="text-xl font-semibold text-emerald-400 mb-3 font-['Cinzel']"
+          >
+            Folk Traditions
+          </h3>
           <p class="text-slate-300">
-            The Wild Harmonies and guardian spirit beliefs represent indigenous knowledge systems that exist alongside formal education, often preserving wisdom that institutions have forgotten or suppressed.
+            The Wild Harmonies and guardian spirit beliefs represent indigenous
+            knowledge systems that exist alongside formal education, often
+            preserving wisdom that institutions have forgotten or suppressed.
           </p>
         </div>
-
       </div>
     </div>
   </section>
@@ -111,19 +214,27 @@ const getAssetUrl = (path: string) => {
   <!-- Future Projects -->
   <section class="py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-emerald-400 mb-8 font-['Cinzel']">
+      <h2
+        class="text-3xl md:text-4xl font-bold text-emerald-400 mb-8 font-['Cinzel']"
+      >
         Future Projects
       </h2>
       <div class="bg-slate-900/50 p-8 rounded-lg border border-emerald-800/30">
         <p class="text-lg text-slate-300 mb-6 leading-relaxed">
-          The world of I'lyr has many more stories to tell. I'm currently working on additional short stories that explore different regions, time periods, and aspects of harmonic magic. There are also plans for more novels that will explore the ancient times where Harmony was discovered and how it became fractured.
+          The world of I'lyr has many more stories to tell. I'm currently
+          working on additional short stories that explore different regions,
+          time periods, and aspects of harmonic magic. There are also plans for
+          more novels that will explore the ancient times where Harmony was
+          discovered and how it became fractured.
         </p>
         <p class="text-slate-300 leading-relaxed">
-          I'm also developing a companion guide to the world of I'lyr, complete with maps, detailed explanations of the harmonic traditions, character genealogies, and historical timelines. This will be a resource for readers who want to dive deeper into the world's rich mythology and complex political landscape.
+          I'm also developing a companion guide to the world of I'lyr, complete
+          with maps, detailed explanations of the harmonic traditions, character
+          genealogies, and historical timelines. This will be a resource for
+          readers who want to dive deeper into the world's rich mythology and
+          complex political landscape.
         </p>
       </div>
     </div>
   </section>
-
-
 </Layout>
