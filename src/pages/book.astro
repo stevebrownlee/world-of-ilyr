@@ -186,12 +186,14 @@ const getAssetUrl = (path: string) => {
         <!-- Map Display -->
         <div class="relative group">
           <div class="relative overflow-hidden rounded-lg border-2 border-emerald-800/30 hover:border-emerald-600/50 transition-colors duration-300 bg-slate-900/30 p-4">
-            <img
-              src={getAssetUrl('images/ilyr-prime.jpg')}
-              alt="Detailed map of I'lyr showing the Five Arbories, settlements, and geographic features"
-              class="w-full h-auto rounded-lg shadow-2xl cursor-pointer transition-transform duration-300 hover:scale-105"
-              loading="lazy"
-            />
+            <a href={getAssetUrl('images/ilyr-prime.jpg')} target="_blank" rel="noopener noreferrer" class="block">
+              <img
+                src={getAssetUrl('images/ilyr-prime.jpg')}
+                alt="Detailed map of I'lyr showing the Five Arbories, settlements, and geographic features"
+                class="w-full h-auto rounded-lg shadow-2xl cursor-pointer transition-transform duration-300 hover:scale-105"
+                loading="lazy"
+              />
+            </a>
             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent pointer-events-none rounded-lg"></div>
           </div>
           <p class="text-center text-sm text-slate-400 mt-4 italic">
@@ -220,7 +222,7 @@ const getAssetUrl = (path: string) => {
               </li>
               <li class="flex items-start">
                 <span class="text-emerald-400 mr-3">💧</span>
-                <span><strong>Northern Marshlands:</strong> Ancient wetlands home to unique Wild Harmonies</span>
+                <span><strong>Southern Marshlands:</strong> Ancient wetlands home to guardian spirits of the reeds</span>
               </li>
               <li class="flex items-start">
                 <span class="text-emerald-400 mr-3">⛰️</span>
