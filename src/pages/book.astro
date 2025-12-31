@@ -176,6 +176,73 @@ const getAssetUrl = (path: string) => {
     </div>
   </section>
 
+  <!-- Geography of I'lyr -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-emerald-400 mb-12 text-center font-['Cinzel']">
+        Geography of I'lyr
+      </h2>
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <!-- Map Display -->
+        <div class="relative group">
+          <div class="relative overflow-hidden rounded-lg border-2 border-emerald-800/30 hover:border-emerald-600/50 transition-colors duration-300 bg-slate-900/30 p-4">
+            <img
+              src={getAssetUrl('images/ilyr-prime.jpg')}
+              alt="Detailed map of I'lyr showing the Five Arbories, settlements, and geographic features"
+              class="w-full h-auto rounded-lg shadow-2xl cursor-pointer transition-transform duration-300 hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent pointer-events-none rounded-lg"></div>
+          </div>
+          <p class="text-center text-sm text-slate-400 mt-4 italic">
+            Click to view larger version • <a href={getAssetUrl('images/ilyr-prime.jpg')} download="ilyr-prime-map.jpg" class="text-emerald-400 hover:text-emerald-300">Download Map</a>
+          </p>
+        </div>
+
+        <!-- Map Information -->
+        <div class="space-y-6">
+          <div class="bg-slate-900/50 p-6 rounded-lg border border-emerald-800/30">
+            <h3 class="text-2xl font-semibold text-emerald-400 mb-4 font-['Cinzel']">The Realm of I'lyr</h3>
+            <p class="text-slate-300 text-lg leading-relaxed mb-4">
+              I'lyr spans a vast expanse of primeval forests, ancient marshlands, and towering mountains. At its heart stand the Five Arbories, each representing a different harmonic tradition and serving as centers of learning and power.
+            </p>
+            <p class="text-slate-300 text-lg leading-relaxed">
+              Beyond the Arbories, numerous settlements—from the marsh-dwelling communities to isolated forest villages—maintain their own traditions, some predating the formal Arbory system itself.
+            </p>
+          </div>
+
+          <div class="bg-slate-900/50 p-6 rounded-lg border border-emerald-800/30">
+            <h4 class="text-xl font-semibold text-emerald-300 mb-3 font-['Cinzel']">Geographic Features</h4>
+            <ul class="space-y-3 text-slate-300 text-lg">
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-3">🌲</span>
+                <span><strong>The Great Forest:</strong> Dense primeval woodland covering most of I'lyr</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-3">💧</span>
+                <span><strong>Northern Marshlands:</strong> Ancient wetlands home to unique Wild Harmonies</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-3">⛰️</span>
+                <span><strong>Mountain Ranges:</strong> Natural barriers defining regional boundaries</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-3">🏛️</span>
+                <span><strong>Abandoned Settlements:</strong> Mysterious ruins holding forgotten knowledge</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-emerald-900/20 p-6 rounded-lg border border-emerald-600/30">
+            <p class="text-emerald-300 text-lg">
+              <strong>Explore Further:</strong> Each location on this map plays a role in Iris's journey. Some harbor ancient secrets, others represent political power, and a few hold the key to understanding the Corrupted Whisper itself.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Call to Action -->
   <section class="py-20 bg-gradient-to-r from-emerald-900/50 to-slate-900/50">
     <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">

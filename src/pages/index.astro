@@ -11,6 +11,11 @@ const getAssetUrl = (path: string) => {
 <Layout title="The Secret Harmony - Enter the World of I'lyr">
   <!-- Hero Section -->
   <section class="relative py-12 overflow-hidden">
+    <!-- Map Background with Parallax Effect -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute inset-0 bg-center bg-cover bg-no-repeat" style={`background-image: url('${getAssetUrl('images/ilyr-prime.jpg')}')`}></div>
+      <div class="absolute inset-0 backdrop-blur-sm"></div>
+    </div>
     <div class="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-emerald-900/80"></div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
