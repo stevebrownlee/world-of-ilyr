@@ -46,13 +46,18 @@ const getAssetUrl = (path: string) => {
             </h3>
 
             <p class="text-slate-300 leading-relaxed text-lg">
-              <p class="mb-4">Visit the Portal to get the latest news about I'lyr instantly, and read past newsletters.</p>
+              <p class="mb-4">
+                Visit the Portal to get the latest news about I'lyr instantly,
+                and read past newsletters.
+              </p>
 
-              <a href="https://world-of-ilyr.kit.com/profile"
-                target="_blank" class="border border-emerald-600 text-emerald-400 hover:bg-emerald-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 text-center">
-              Newsletter Portal
-            </a>
-
+              <a
+                href="https://world-of-ilyr.kit.com/profile"
+                target="_blank"
+                class="border border-emerald-600 text-emerald-400 hover:bg-emerald-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 text-center"
+              >
+                Newsletter Portal
+              </a>
             </p>
           </div>
           <div
@@ -73,22 +78,13 @@ const getAssetUrl = (path: string) => {
               even the darkest corruptions.
             </p>
           </div>
-
         </div>
-        <div class="lg:col-span-5 mt-12 lg:mt-0">
-          <div class="relative">
-            <div
-              class="w-full max-w-md mx-auto h-96 bg-gradient-to-br from-emerald-700 to-slate-800 rounded-lg border border-emerald-800/30 flex items-center justify-center"
-            >
-              <div class="text-center">
-                <img
-                  src={getAssetUrl("images/steve.png")}
-                  alt="Author: Steve Brownlee"
-                  class="w-full max-w-md mx-auto rounded-lg shadow-2xl border border-emerald-800/30"
-                />
-              </div>
-            </div>
-          </div>
+        <div class="lg:col-span-5 mt-12 lg:mt-0 flex items-start" style="height:100%;">
+            <img
+              src={getAssetUrl("images/steve.png")}
+              alt="Author: Steve Brownlee"
+              class="w-full max-w-md mx-auto rounded-lg shadow-2xl"
+            />
         </div>
       </div>
     </div>
